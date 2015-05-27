@@ -16,7 +16,7 @@ gulp.task('styles', function () {
       onError: console.error.bind(console, 'Sass error:')
     }))
     .pipe($.postcss([
-      require('autoprefixer-core')({browsers: ['last 1 version']})
+      require('autoprefixer-core')({browsers: ['last 2 version']})
     ]))
     .pipe($.sourcemaps.write())
     .pipe(gulp.dest('.tmp/styles'))
@@ -71,6 +71,17 @@ gulp.task('extras', function () {
   ], {
     dot: true
   }).pipe(gulp.dest('dist'));
+});
+
+var wiredep = require('wiredep').stream;
+
+gulp.task('bower', function () {
+  gulp.src('./app/index.html')
+    .pipe(wiredep({
+      //optional: 'configuration',
+      //goes: 'here'
+    }))
+    .pipe(gulp.dest('./dest'));
 });
 
 gulp.task('clean', require('del').bind(null, ['.tmp', 'dist']));
