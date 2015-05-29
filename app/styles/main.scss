@@ -1,40 +1,84 @@
 // bower:scss
 // endbower
 
+@import "vars";
+@import "base";
+@import "grid";
+@import "type";
+@import "utility";
+@import "icon-font";
+@import "buttons";
 
-html {
-  box-sizing: border-box;
-}
+@import "header";
+@import "csscv";
 
-*, *:before, *:after {
-  box-sizing: inherit;
-}
 
-body {
-  background: #fafafa;
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  color: #333;
-}
-
-.hero-unit {
-  margin: 50px auto 0 auto;
-  width: 300px;
-  font-size: 18px;
-  font-weight: 200;
-  line-height: 30px;
-  background-color: #eee;
-  border-radius: 6px;
-  padding: 60px;
-  h1 {
-    font-size: 60px;
-    line-height: 1;
-    letter-spacing: -1px;
-  }
-}
 
 .browserupgrade {
-  margin: 0.2em 0;
   background: #ccc;
   color: #000;
-  padding: 0.2em 0;
 }
+
+.page__container {
+	max-width: 1000px;
+	width: 100%;
+	margin: 0 auto;
+}
+
+.page__content {
+	background: $basePageColor;
+	margin: $baseLineHeight auto;
+	border: 1px solid $baseBorderColor;
+}
+
+.page__heading {
+	margin-bottom: $baseLineHeight;
+}
+
+.page__subheading {
+	margin-bottom: $baseLineHeight / 2;
+	border-bottom: 1px dotted $baseBorderColor;
+}
+
+.rounded {
+	width: 100%;
+	max-width: 250px;
+	border-radius: 50%;
+  	border: 1px solid #ddd;
+  	padding: $baseLineHeight / 3;
+  	margin-bottom: $baseLineHeight;
+}
+
+.link-list {
+	border-left: $baseFontSize/2 solid $primary-brand;
+}
+
+.link-list__item {
+	border-bottom: 1px dotted $baseBorderColor;
+	padding: $baseLineHeight/2;
+	display: block;
+	position: relative;
+	overflow: hidden;
+	&:hover {
+		background: $light-grey;
+		text-decoration: none;
+	}
+}
+
+.link-list__icon {
+	padding-left: $baseLineHeight / 3;
+
+}
+
+.link-list__item:hover .link-list__icon,
+.link-list__item:focus .link-list__icon {
+	transition: all .1s linear;
+	font-size: $baseFontSize * 3;
+	display: inline-block;
+	position: absolute;
+  	left: 8%;
+  	top: -8%;
+	transform: rotate(-8deg);
+}
+
+@import "print";

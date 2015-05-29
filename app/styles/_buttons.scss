@@ -1,0 +1,128 @@
+//
+//	Extenisble Button: build off of .button and add modifier classes in markup
+//
+//	Base
+//		.button
+//		.button--disabled
+//
+//	Sizes
+//		.button--full-width
+//		.button--small
+//		.button--large
+//
+//	Colors
+//		.button--primary
+//      .button--link
+
+
+
+
+//
+//	Button Variables
+//
+$button-bg-color:               $baseBorderColor;
+$button-border-color:           $baseHeadingColor;
+$button-font-color:             $baseFontColor;
+$button-font-color--alt:        $white;
+
+$button--primary:               $primary-brand;
+$button--success:               #438355;
+$button--danger:                #bd3c37;
+$button--warning:               #e6bb0e;
+$button--disabled:              #e5e5e5;
+$button-font-color--disabled:   #666;
+
+
+
+
+
+//
+//	Button Styles
+//
+.button,
+input[type="submit"],
+input[type="reset"],
+input[type="button"] {
+	font-size: $baseFontSize;
+    background: $button-bg-color;
+    color: $button-font-color;
+    border-style: solid;
+    border-width: 0 0 0 0;
+    border-color: $button-border-color;
+    cursor: pointer;
+    display: inline-block;
+    line-height: normal;
+    text-decoration: none;
+    vertical-align: middle;
+    padding: ($baseFontSize / 2 - 2) $baseFontSize;
+    height: $baseFontSize*2;
+    border-radius: 3px;
+    &:hover {
+        background: darken($button-bg-color, 5%);
+        text-decoration: none;
+    }
+    &:active,
+    &:focus {
+        border-width: 2px 0 0 0;
+        text-decoration: none;
+    }
+    &.disabled,
+    &.button--disabled,
+ 	&[disabled] {
+ 		pointer-events: none;
+    	cursor: not-allowed;
+    	opacity: .5;
+    	box-shadow: none;
+        background: $button--disabled;
+        border-color: darken($button--disabled, 10%);
+        color: $button-font-color--disabled;
+        &:hover {
+            background: darken($button--disabled, 5%);
+        }
+    }
+    &.button--full-width {
+	    width: 100%;
+	    padding-left: 0 !important;
+	    padding-right: 0 !important;
+	    text-align: center;
+    }
+    &.button--inline {
+        width: 100%/2-3;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+        text-align: center;
+    }
+    &.button--small {
+    	font-size: 12px;
+    	padding: 4px 8px;
+    	height: 26px;
+    }
+    &.button--large {
+    	font-size: 18px;
+		padding: 8px 16px;
+		height: 40px;
+    }
+    &.button--primary {
+    	background: $button--primary;
+    	border-color: darken($button--primary, 10%);
+    	color: $button-font-color--alt;
+    	&:hover {
+    		background: darken($button--primary, 5%);
+    	}
+    }
+    &.button--link {
+    	background: transparent;
+    	border-color: transparent;
+    }
+}
+
+.button + .button {
+	margin: 0 5px;
+}
+
+// Fix for odd Mozilla border & padding issues
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+}

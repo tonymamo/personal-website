@@ -1,0 +1,43 @@
+//------------------------------------
+//	Color Variables
+//------------------------------------
+$white:					#ffffff;
+$light-grey:			#fafafa;
+$dark-grey:				#5d5d5d;
+$black:					#000000;
+
+$baseFontColor:			#9d9d9d;
+$baseBorderColor: 		#eeeeee;
+$basePageColor: 		$white;
+$baseHeadingColor: 		$dark-grey;
+
+$primary-brand: 		teal;
+
+
+
+
+
+//------------------------------------
+//	Misc Variables
+//------------------------------------
+$header-background:		$primary-brand;
+$grid-breakpoint:		800px;
+
+
+
+
+
+//------------------------------------
+//	Typography Variables
+//------------------------------------
+$sansFontFamily:        "freight-sans-pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$serifFontFamily:       "freight-micro-pro", Georgia, "Times New Roman", Times, serif;
+$scriptFontFamily:		"bello-pro", "Brush Script MT", cursive;
+$monoFontFamily:        Monaco, Menlo, Consolas, "Courier New", monospace;
+
+$baseFontSize:       	16px;
+$baseLineHeight:        24px;
+
+$baseFontFamily:        $sansFontFamily;
+$headingsFontFamily:    $serifFontFamily;
+$headingsFontWeight:    normal;  // set to normal if using a webfont so browsers dont alter built in weight of webfont

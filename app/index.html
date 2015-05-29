@@ -1,5 +1,5 @@
 <!doctype html>
-<html class="no-js" lang="" ng-app="tmApp">
+<html class="no-js" lang="en" ng-app="tmApp">
   <head>
     <meta charset="utf-8">
     <meta name="description" content="">
@@ -20,26 +20,22 @@
     <!-- build:js scripts/vendor/modernizr.js -->
     <script src="/bower_components/modernizr/modernizr.js"></script>
     <!-- endbuild -->
+
+    <!-- Typekit -->
+    <script src="//use.typekit.net/bbr5dap.js"></script>
+    <script>try{Typekit.load();}catch(e){}</script>
+    <!-- end Typekit -->
   </head>
   <body>
     <!--[if lt IE 10]>
-      <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+      <p class="browserupgrade base-padding align-center">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
-    <div class="hero-unit">
-      <h1>'Allo, 'Allo!</h1>
-      <p>You now have</p>
-      <ul>
-        <li>HTML5 Boilerplate</li>
-        <li>Sass</li>
-        <li>Modernizr</li>
-      </ul>
-    </div>
+    <div ng-include="'partials/header.html'"></div>
 
-    <div ui-view></div>
-
-    <a ui-sref="state1">State 1</a>
-    <a ui-sref="state2">State 2</a>
+    <main role="main" class="page">
+      <div ui-view class="page__container base-padding page__content">
+    </main>
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
     <script>

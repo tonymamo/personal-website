@@ -1,0 +1,103 @@
+//------------------------------------
+//	Element Type Defaults
+//------------------------------------
+body, 
+div, 
+pre, 
+form, 
+fieldset, 
+p, 
+blockquote, 
+th, 
+td {
+	font-size: $baseFontSize;
+	font-family: $sansFontFamily;
+	color: $baseFontColor;
+}
+
+p {
+    margin: 0 0 $baseLineHeight / 2;
+	line-height: 1.25;
+}
+
+a {
+	text-decoration: none;
+	cursor: pointer;
+}
+
+
+
+
+
+//------------------------------------
+//	Emphasis & Miscellaneous
+//------------------------------------
+strong,
+.strong { 
+	//font-family: $fontBold;
+	font-weight: bold;
+}
+
+em, i,
+.italic { 
+	//font-family: $fontLightItalic;
+	font-style: italic;
+}
+
+.light { 
+	//font-family: $sansFontFamily; 
+	font-weight: lighter;
+}
+
+cite { 
+	font-family: $baseFontFamily; 
+}
+
+
+
+
+
+//------------------------------------
+//	Headings & Font Sizing
+//------------------------------------
+h1, h2, h3, h4, h5, h6 {
+	margin: 0;
+	font-family: $headingsFontFamily;
+	font-weight: $headingsFontWeight;
+	line-height: inherit;
+	color: $baseHeadingColor;
+	text-rendering: optimizelegibility; /* Fix the character spacing for headings */
+	small {
+		font-weight: normal;
+		line-height: 1;
+	}
+}
+
+h1,
+h2,
+h3 { 
+	line-height: $baseLineHeight * 2; 
+}
+
+
+// Double Stranded Type Hierarchy -  http://csswizardry.com/2012/02/pragmatic-practical-font-sizing-in-css/
+.giga           { font-size: $baseFontSize * 3; }        // 48px, based on 16px baseFontSize
+.mega           { font-size: $baseFontSize * 2.25; }     // 36
+h1, .alpha      { font-size: $baseFontSize * 2; }        // 32 
+h2, .beta       { font-size: $baseFontSize * 1.5; }      // 24
+h3, .gamma      { font-size: $baseFontSize * 1.25; }     // 20
+h4, .delta      { font-size: $baseFontSize * 1.25; }     // 20
+h5, .epsilon    { font-size: $baseFontSize * 1.125; }    // 18
+h6, .zeta       { font-size: $baseFontSize * 1; }        // 16
+
+h1 small        { font-size: $baseFontSize * 1.5; }      // 24
+h2 small        { font-size: $baseFontSize * 1.125; }    // 18
+h3 small        { font-size: $baseFontSize; }            // 16
+h4 small        { font-size: $baseFontSize; }            // 16
+
+.body-text      { font-size: $baseFontSize; }            // 16
+
+small,
+.small          { font-size: $baseFontSize * .875; }     // 14
+.milli          { font-size: $baseFontSize * .812; }     // 13
+.micro          { font-size: $baseFontSize * .75; }      // 12$

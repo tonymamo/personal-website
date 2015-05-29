@@ -1,0 +1,165 @@
+//------------------------------------*\
+//    CONTENTS
+//------------------------------------*/
+//
+//	Sizing Classes
+//	Utility Classes
+//	Floats & Clears
+//	Hiding Text
+//	Horizontal List Abstraction
+
+
+
+
+
+//------------------------------------*\
+//    SIZING CLASSES
+//------------------------------------*/
+.base-padding {
+	padding: $baseLineHeight;
+}
+
+.half-padding {
+	padding: $baseLineHeight/2;
+}
+
+.base-margin {
+	margin: $baseLineHeight;
+}
+
+.half-margin {
+	margin: $baseLineHeight/2;
+}
+
+
+
+
+
+//------------------------------------*\
+//    UTILITY CLASSES
+//------------------------------------*/
+.clearfix {
+	*zoom: 1;
+	&:before,
+	&:after {
+    	display: table;
+    	content: "";
+    	line-height: 0;
+  	}
+  	&:after {
+	    clear: both;
+  	}
+}
+
+.text-overflow {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+// for use on <ul>s and <li>s to get rid of defaults
+.unstyled {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.animate {
+  	//.transition();
+}
+
+// makes long text wrap and hyphenate in a container block
+.hyphenate {
+    white-space: normal;
+    -ms-word-break: break-all;
+    word-break: break-all;
+    word-break: break-word;
+    -webkit-hyphens: auto;
+       -moz-hyphens: auto;
+            hyphens: auto;
+}
+
+// cuts off overflowing text and adds ellipsis
+.ellipsis {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    display: block;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    white-space: nowrap;
+}
+
+.align-left   	{ text-align: left; }
+.align-right  	{ text-align: right; }
+.align-center 	{ text-align: center; }
+
+.full-width		{ width: 100%;}
+
+.columns {
+    //unhide bullets for ul's
+    list-style-position: inside;
+    // mobile-first way
+    @media screen and (min-width: 600px){
+        columns: 2;
+    }
+}
+
+
+
+//------------------------------------*\
+//    FLOATS & CLEARS
+//------------------------------------*/
+.float-left  { float: left; }
+.float-right { float: right;}
+.clear-left  { clear: left; }
+.clear-right { clear: right;}
+
+
+
+
+
+//------------------------------------*\
+//    HIDING TEXT
+//------------------------------------*/
+// hides content intended for Assistive Technologes
+.assistText {
+	clip: rect(1px, 1px, 1px, 1px);
+	margin: 0;
+	position: absolute !important;
+	left: -999px;
+	width: 0;
+	height: 0;
+	text-indent: -999em;
+}
+
+// visually hides text while keeping it in the DOM
+.hide-text {
+    font: 0/0 a;
+    color: transparent;
+    text-shadow: none;
+    background-color: transparent;
+    border: 0;
+}
+
+// hides elements from screen
+.hidden {
+    display: none;
+    visibility: hidden;
+}
+
+
+
+
+
+//------------------------------------*\
+//    HORIZONTAL LIST ABSTRACTION
+//------------------------------------*/
+.horizontal-list {
+	list-style: none;
+	margin: 0;
+}
+
+.horizontal-list li,
+.horizontal-list li a {
+	display: inline-block;
+}

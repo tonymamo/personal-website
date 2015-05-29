@@ -4,17 +4,48 @@ var tmApp = angular.module('tmApp', ['ui.router']);
 
 tmApp.config(function($stateProvider, $urlRouterProvider) {
   //
-  // For any unmatched url, redirect to /state1
-  $urlRouterProvider.otherwise("/state1");
+  // For any unmatched url, redirect to /home
+  $urlRouterProvider.otherwise("/home");
   //
   // Now set up the states
   $stateProvider
-    .state('state1', {
-      url: "/state1",
-      templateUrl: "partials/state1.html"
+    .state('home', {
+      url: "/home",
+      templateUrl: "partials/home.html"
     })
-    .state('state2', {
-      url: "/state2",
-      templateUrl: "partials/state2.html"
+    .state('resume', {
+      url: "/resume",
+      templateUrl: "partials/resume.html"
+    })
+    .state('about', {
+      url: "/about",
+      templateUrl: "partials/about.html"
     });
 });
+
+(function() {
+    'use strict';
+
+    angular.module('tmApp').controller('resumeCtrl', ['$scope', function($scope){
+
+        $scope.resumeHighlight = false;
+
+        $scope.plainTextVersion = function () {
+            $scope.resumeHighlight = false;
+        }
+
+        $scope.highlightedVersion = function () {
+            $scope.resumeHighlight = true;
+        }
+
+        $scope.printResume = function() {
+          var printContents = document.getElementById('js-resume').innerHTML;
+          var popupWin = window.open('', '_blank');
+          popupWin.document.open()
+          popupWin.document.write('<html><head><link rel="stylesheet" type="text/css" href="/bower_components/normalize.css/normalize.css" /><link rel="stylesheet" type="text/css" href="styles/main.css" /><script src="//use.typekit.net/bbr5dap.js"></script><script>try{Typekit.load();}catch(e){}</script></head><body onload="window.print()">' + printContents + '</html>');
+          popupWin.document.close();
+        } 
+        
+    }]);
+
+}());

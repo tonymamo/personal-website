@@ -1,0 +1,63 @@
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  background: $basePageColor url('../images/topo.jpg') repeat;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  color: $baseFontColor;
+}
+
+a {
+	color: saturate($primary-brand, 50%);
+	transition: all .1s linear;
+	&:visited {
+		//color: $primary-brand;
+	}
+	&:hover {
+		text-decoration: underline;
+	}
+	&:focus,
+	&:active {
+		outline: thin dotted;
+		text-decoration: underline;		
+	}
+
+}
+
+figure {
+	border: 1px solid $baseBorderColor;
+	background: $light-grey;
+	margin: 0 0 $baseLineHeight 0;
+}
+
+blockquote {
+	margin: $baseLineHeight;
+	quotes: "\201C""\201D""\2018""\2019";
+	position: relative;
+	&:before {
+		position: absolute;
+		line-height: 1;
+		left: -$baseLineHeight;
+		font-size: $baseFontSize * 3;
+		content: open-quote;
+		color: $primary-brand;
+	}
+}
+
+img {
+	border: 0;
+	width: auto;
+	height: auto;
+	max-width: 100%;
+	vertical-align: middle;
+}
+
+ul {
+	margin-left: $baseLineHeight / 2;
+	padding: 0;
+}

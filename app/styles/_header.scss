@@ -1,0 +1,42 @@
+.header {
+	background: $header-background;
+}
+
+.header__logo {
+	font-family: $scriptFontFamily;
+	background-color: $white;
+	color: $primary-brand;
+	border-radius: 50%;
+	height: $baseLineHeight * 2;
+	width: $baseLineHeight * 2;
+	display: inline-block;
+	line-height: $baseLineHeight * 2;
+	position: relative;
+	&:hover, 
+	&:focus {
+		color: $baseHeadingColor;
+		box-shadow: 0 0 0 3px $white;
+	}
+}
+
+.logomark {
+	position: absolute;
+}
+
+.first-initial {
+	top: -3px;
+	left: 8px;
+}
+
+.last-initial {
+	top: 8px;
+	left: 14px;
+}
+
+.header__navigation {
+	line-height: $baseLineHeight;
+}
+
+.header__navigation-item {
+	color: $white;
+}

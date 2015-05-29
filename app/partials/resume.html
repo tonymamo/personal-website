@@ -1,0 +1,257 @@
+<div ng-controller="resumeCtrl">
+<h1>Résumé</h1>
+<p>intro text</p>
+<p>
+    <a href="" class="button button--primary" ng-click="plainTextVersion()"><span class="icon icon-profile"></span> Text Version</a>
+    <a href="" class="button button--primary" ng-click="highlightedVersion()"><span class="icon icon-embed"></span> Code Version</a>
+</p>
+<div ng-show="!resumeHighlight">
+    <a href="" ng-click="printResume()"><span class="icon icon-printer"></span> Print</a>
+</div>
+
+<div id="js-resume">
+    <div class="non-csscv" ng-class="{'csscv': resumeHighlight, 'non-csscv': !resumeHighlight}">
+
+        <h1 class="comment-block  spaced--large  resume__heading">
+            <span class="comment-block__line">Tony Mamo</span>
+        </h1>
+
+        <h2 class="comment-block resume__subheading">
+            <span class="comment-block__line">About me</span>
+        </h2>
+
+        <div class="ruleset">
+
+            <h3 class="selector">Me</h3>
+
+            <dl class="declarations">
+
+                <dt class="property">Name</dt>
+                <dd class="value"><span class="string">Anthony (Tony) Mamo</span></dd>
+
+                <dt class="property">Job-Title</dt>
+                <dd class="value"><span class="string">Senior Front-end Architect, Team Lead</span></dd>
+
+                <dt class="property">Location</dt>
+                <dd class="value"><span class="string">Plymouth, MI</span></dd>
+
+            </dl>
+
+        </div>
+
+        <div class="ruleset  spaced--large">
+
+            <h3 class="selector"><span class="element" data-namespace="me">Contact</span></h3>
+
+            <dl class="declarations">
+
+                <dt class="property">Phone</dt>
+                <dd class="value"><span class="string"><a href="tel:13135504795">(313) 550-4795</a></span></dd>
+
+                <dt class="property">Email</dt>
+                <dd class="value"><span class="string"><a href="mailto:tony@tonymamo.com?subject=Resume%20contact">tony@tonymamo.com</a></span></dd>
+
+                <dt class="property">Website</dt>
+                <dd class="value"><span class="url"><a href="http://tonymamo.com">tonymamo.com</a></span></dd>
+
+                <dt class="property">LinkedIn</dt>
+                <dd class="value"><span class="url"><a href="http://www.linkedin.com/in/anthonymamo">linkedin.com/in/anthonymamo</a></span></dd>
+
+                <dt class="property">GitHub</dt>
+                <dd class="value"><span class="url"><a href="https://github.com/tonymamo/">github.com/tonymamo</a></span></dd>
+
+                <dt class="property">Twitter</dt>
+                <dd class="value"><span class="url"><a href="https://twitter.com/tonymamo">@tonymamo</a></span></dd>
+
+            </dl>
+
+        </div>
+
+        
+
+        
+
+        <h2 class="comment-block resume__subheading">
+            <span class="comment-block__line">Work Experience</span>
+        </h2>
+
+        <div class="ruleset">
+
+            <h4 class="selector"><span class="modifier" data-namespace="job">UnitedHealth<span class="selector__delimiter"> </span>Group</span></h4>
+
+            <dl class="declarations">
+
+                <dt class="property">Company</dt>
+                <dd class="value"><span class="string">UnitedHealth Group (Optum Technology)</span></dd>
+
+                <dt class="property">Location</dt>
+                <dd class="value"><span class="string">Southfield, MI</span></dd>
+
+                <dt class="property">Title</dt>
+                <dd class="value"><span class="string">Technical Lead, Senior Web Developer</span></dd>
+
+                <dt class="property">From</dt>
+                <dd class="value"><span class="string">October, 2011</span></dd>
+
+                <dt class="property">To</dt>
+                <dd class="value"><span class="string">Present</span></dd>
+
+                <dt class="property">Responsibilities</dt>
+                <dd class="value">
+                    <ul class="value-list">
+                        <li>Consultancy</li>
+                        <li>Speaking</li>
+                        <li>Workshops</li>
+                        <li>Development</li>
+                    </ul>
+                </dd>
+
+                <dt class="property">Notes</dt>
+                <dd class="value"><span class="string">After years of continued open-source
+                    contributions, publication of articles, speaking, workshops, and
+                    working in varied organisations, I decided, in 2013, to turn CSS
+                    Wizardry into my full time job. I am working to help agencies,
+                    product teams and individuals write better quality front-end
+                    code for faster, leaner and more scalable products. I am doing
+                    this through a combination of workshops, talks and consultancy.</span></dd>
+
+            </dl>
+
+        </div>
+
+        <div class="ruleset">
+
+            <h4 class="selector"><span class="modifier" data-namespace="job">Freelance</span></h4>
+
+            <dl class="declarations">
+
+                <dt class="property">Company</dt>
+                <dd class="value"><span class="string">Tony Mamo - Freelance</span></dd>
+
+                <dt class="property">Location</dt>
+                <dd class="value"><span class="string">Metro-Detroit, MI</span></dd>
+
+                <dt class="property">Title</dt>
+                <dd class="value"><span class="string">Web Designer &amp; Developer</span></dd>
+
+                <dt class="property">From</dt>
+                <dd class="value"><span class="string">April, 2007</span></dd>
+
+                <dt class="property">To</dt>
+                <dd class="value"><span class="string">October, 2011</span></dd>
+
+                <dt class="property">Responsibilities</dt>
+                <dd class="value">
+                    <ul class="value-list">
+                        <li>Build</li>
+                        <li><span class="string">Front-end Architecture</span></li>
+                        <li><span class="string">Front-end Performance</span></li>
+                        <li>Scalability</li>
+                        <li><span class="string">Mobile Development</span></li>
+                        <li>Training</li>
+                        <li><span class="string">Developer Relations</span></li>
+                        <li><span class="string">Progressive Enhancement</span></li>
+                        <li><span class="string">Design Rationalisation</span></li>
+                    </ul>
+                </dd>
+
+                <dt class="property">Notes</dt>
+                <dd class="value"><span class="string">Working solo in a large team
+                of software engineers, I was responsible for the front-ends of some
+                of Sky’s largest and most profitable online products. I worked to
+                provide in-house tools and frameworks, as well as code standards,
+                to enable the larger team to construct front-ends. I also focused
+                heavily front-end performance, scalability, architecture and
+                maintainability.</span></dd>
+
+            </dl>
+
+        </div>
+
+        <div class="ruleset  spaced--large">
+
+            <h4 class="selector"><span class="modifier" data-namespace="job">Girl<span class="selector__delimiter"> </span>Scouts</span></h4>
+
+            <dl class="declarations">
+
+                <dt class="property">Company</dt>
+                <dd class="value"><span class="string">Girl Scouts of Southeastern Michigan</span></dd>
+
+                <dt class="property">Location</dt>
+                <dd class="value"><span class="string">Detroit, MI</span></dd>
+
+                <dt class="property">Title</dt>
+                <dd class="value"><span class="string">Print Designer &amp; Web Developer</span></dd>
+
+                <dt class="property">From</dt>
+                <dd class="value"><span class="string">August, 2009</span></dd>
+
+                <dt class="property">To</dt>
+                <dd class="value"><span class="string">May, 2010</span></dd>
+
+                <dt class="property">Responsibilities</dt>
+                <dd class="value">
+                    <ul class="value-list">
+                        <li>Build</li>
+                    </ul>
+                </dd>
+
+                <dt class="property">Notes</dt>
+                <dd class="value"><span class="string">Internship turned contract job</span></dd>
+
+            </dl>
+
+        </div>
+
+        <h2 class="comment-block resume__subheading">
+            <span class="comment-block__line">Education</span>
+        </h2>
+
+        <div class="ruleset ">
+
+            <h3 class="selector"><span class="modifier" data-namespace="college">Schoolcraft<span class="selector__delimiter"> </span>College</span></h3>
+
+            <dl class="declarations">
+
+                <dt class="property">Location</dt>
+                <dd class="value"><span class="string">Livonia, MI</span></dd>
+
+                <dt class="property">From</dt>
+                <dd class="value"><span class="string">September, 2009</span></dd>
+
+                <dt class="property">To</dt>
+                <dd class="value"><span class="string">December, 2009</span></dd>
+
+                <dt class="property">Notes</dt>
+                <dd class="value"><span class="string">Credits earned in Web Design, Flash, Illustrator, and Typography.</span></dd>
+
+            </dl>
+
+        </div>
+
+        <div class="ruleset  spaced--large">
+
+            <h3 class="selector"><span class="modifier" data-namespace="college">University<span class="selector__delimiter"> </span>of<span class="selector__delimiter"> </span>Michigan</span></h3>
+
+            <dl class="declarations">
+
+                <dt class="property">Location</dt>
+                <dd class="value"><span class="string">Dearborn, MI</span></dd>
+
+                <dt class="property">From</dt>
+                <dd class="value"><span class="string">September, 2005</span></dd>
+
+                <dt class="property">To</dt>
+                <dd class="value"><span class="string">May, 2009</span></dd>
+
+                <dt class="property">Notes</dt>
+                <dd class="value"><span class="string">Earned Bachelor's Degree in Psychology, with a minor in Philosophy</span></dd>
+
+            </dl>
+
+        </div>
+
+        <p class="comment notice">Inspired by <a href="https://github.com/csswizardry/csscv">CSSCV</a>, a project by <a href="https://twitter.com/csswizardry">Harry Roberts</a>.
+        </p>
+    </div>
+</div>
