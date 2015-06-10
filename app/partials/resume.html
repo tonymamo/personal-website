@@ -1,16 +1,25 @@
-<div ng-controller="resumeCtrl">
 <h1>Résumé</h1>
 <p>intro text</p>
-<p>
-    <a href="" class="button button--primary" ng-click="plainTextVersion()"><span class="icon icon-profile"></span> Text Version</a>
-    <a href="" class="button button--primary" ng-click="highlightedVersion()"><span class="icon icon-embed"></span> Code Version</a>
-</p>
-<div ng-show="!resumeHighlight">
-    <a href="" ng-click="printResume()"><span class="icon icon-printer"></span> Print</a>
+<div class="grid">
+    <p class="grid__item-6">
+        <a href="" class="button" 
+            ng-click="plainTextVersion()"
+            ng-class="{'button--primary': !resumeHighlight}">
+            <span class="icon icon-profile"></span> Text Version
+        </a>
+        <a href="" class="button" 
+            ng-click="highlightedVersion()"
+            ng-class="{'button--primary': resumeHighlight}">
+            <span class="icon icon-embed"></span> Code Version
+        </a>
+    </p>
+    <p class="grid__item-6 align-right">
+        <a href="" ng-click="printResume()" class="button button--secondary" ng-class="{'button--disabled': resumeHighlight}"><span class="icon icon-printer"></span> Print</a>
+    </p>    
 </div>
 
 <div id="js-resume">
-    <div class="non-csscv" ng-class="{'csscv': resumeHighlight, 'non-csscv': !resumeHighlight}">
+    <div class="base-padding" ng-class="{'csscv': resumeHighlight, 'non-csscv': !resumeHighlight}">
 
         <h1 class="comment-block  spaced--large  resume__heading">
             <span class="comment-block__line">Tony Mamo</span>
@@ -29,8 +38,8 @@
                 <dt class="property">Name</dt>
                 <dd class="value"><span class="string">Anthony (Tony) Mamo</span></dd>
 
-                <dt class="property">Job-Title</dt>
-                <dd class="value"><span class="string">Senior Front-end Architect, Team Lead</span></dd>
+                <dt class="property do-not-print">Job<span class="selector__delimiter"> </span>Title</dt>
+                <dd class="value do-not-print"><span class="string">Senior Front-end Architect, Team Lead</span></dd>
 
                 <dt class="property">Location</dt>
                 <dd class="value"><span class="string">Plymouth, MI</span></dd>

@@ -13,7 +13,8 @@ body {
 }
 
 a {
-	color: saturate($primary-brand, 50%);
+	//color: saturate($primary-brand, 50%);
+	color: $primary-brand;
 	transition: all .1s linear;
 	&:visited {
 		//color: $primary-brand;
@@ -25,6 +26,9 @@ a {
 	&:active {
 		outline: thin dotted;
 		text-decoration: underline;		
+	}
+	p & {
+		text-decoration: underline;
 	}
 
 }
@@ -60,4 +64,13 @@ img {
 ul {
 	margin-left: $baseLineHeight / 2;
 	padding: 0;
+}
+
+::selection {
+	background: $secondary-brand; /* WebKit/Blink Browsers */
+	color: $white;
+}
+::-moz-selection {
+	background: $secondary-brand; /* Gecko Browsers */
+	color: $white;
 }

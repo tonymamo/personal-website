@@ -146,7 +146,7 @@ h3 {
  */
 & {
     line-height: $baseLineHeight; /* [1] */
-    padding: $baseLineHeight; /* [2] */
+    //padding: $baseLineHeight; /* [2] */
     color: $color--text;
     background-color: $color--background;
     margin-top: $baseLineHeight;
@@ -486,8 +486,7 @@ a {
     Non-CSSCV
 \*------------------------------------*/
 .non-csscv {
-    border: 1px dotted $primary-brand;
-    padding: $baseLineHeight;
+    border: 1px dashed $baseBorderColor;
     margin-top: $baseLineHeight;
 
     .declarations {
@@ -538,6 +537,7 @@ a {
         border-bottom: 1px dotted $baseBorderColor;
         color: $primary-brand;
         text-transform: uppercase;
+        letter-spacing: 2px;
     }
 
     .notice {
