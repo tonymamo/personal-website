@@ -33,6 +33,13 @@ a {
 
 }
 
+code {
+	background: $baseBorderColor;
+	border-radius: 3px;
+	padding: 0 3px;
+	color: $secondary-brand;
+}
+
 figure {
 	border: 1px solid $baseBorderColor;
 	background: $light-grey;

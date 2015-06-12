@@ -19,6 +19,12 @@
   color: #000;
 }
 
+.page {
+	@media all and (min-width: $small-grid-breakpoint) {
+		padding: 0 $baseLineHeight;
+	}
+}
+
 .page__container {
 	max-width: 1000px;
 	width: 100%;

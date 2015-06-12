@@ -22,7 +22,8 @@ $secondary-brand:		#ff7f24;
 //	Misc Variables
 //------------------------------------
 $header-background:		$primary-brand;
-$grid-breakpoint:		800px;
+$small-grid-breakpoint:		400px;
+$large-grid-breakpoint:		$small-grid-breakpoint * 2;
 
 
 

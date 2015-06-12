@@ -3,6 +3,37 @@
 'use strict';
 
 angular.module('tmApp', ['ui.router'])
+.controller('navCtrl', ['$scope', '$location', function($scope, $location) {
+    $scope.items = [
+      {
+        path: '/home', 
+        title: 'Home',
+        icon: 'home'
+      },
+      {
+        path: '/about', 
+        title: 'About',
+        icon: 'user'
+      },
+      {
+        path: '/resume', 
+        title: 'Résumé', 
+        icon: 'profile'
+      }
+    ];
+    $scope.isActive = function(item) {
+      if (item.path == $location.path()) {
+        return true;
+      }
+      return false;
+    };
+  }])
+  .controller('MyCtrl1', [function() {
+  }])
+  .controller('MyCtrl2', [function() {
+  }])
+  .controller('MyCtrl3', [function() {
+  }])
 .controller('resumeCtrl', ['$scope', function($scope){
 
   $scope.resumeHighlight = false;
