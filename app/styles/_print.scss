@@ -1,13 +1,36 @@
 @media print {
-  body {
-    background: $white;
-  }
 
-  .non-csscv {
-  	border: none;
-  }
+	body, 
+	div, 
+	pre, 
+	form, 
+	fieldset, 
+	p, 
+	blockquote, 
+	th, 
+	td,
+	a {
+		font-size: $baseFontSize * .75;
+	}
 
-  .do-not-print {
-  	display: none !important;
-  }
+
+	body {
+		background: $white;
+	}
+
+	.non-csscv {
+		border: none;
+		& .resume__heading {
+			line-height: 1.25;
+		}
+	}
+
+	.do-not-print {
+		display: none !important;
+	}
+
+	.skill-list li {
+		float: left;
+		width: 50%;
+	}
 }

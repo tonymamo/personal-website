@@ -1,0 +1,84 @@
+Tony Mamo
+
+Phone: (313) 550-4795
+Email: tony@tonymamo.com
+Website: tonymamo.com
+
+
+
+WORK EXPERIENCE
+
+UnitedHealth Group (Optum Technology)
+Southfield, MI
+Technical Lead, Senior Web Developer
+October 2011 to Present
+Responsibilities: Leverages technical expertise in Front-End Web Development as well as User Experience and Interface Design to provide support and resolve critical issues for team members. Experience includes creation and maintenance of single page websites to enterprise web applications with both internal and external clients using various languages, tools, and configurations. Gather requirements and specifications from product owners and provide estimates and create timelines for project management. Manage a team of developers, conduct interviews, and allocate resources to projects as needed to ensure delivery deadlines with clients. Also conduct code reviews and establish guidelines for entire HTML/CSS team and continue to enhance our processes and best practices. Use the latest and greatest techniques to create sites that are 100% responsive and gracefully degrade (or are progressively enhanced) to project requirements for cross browser/device compatibility. HTML5, CSS3, JS, Angular, and Adobe AEM used on a daily basis.
+
+Tony Mamo - Freelance
+Metro-Detroit, MI
+Web Designer & Developer
+April 2007 to October 2011
+Responsibilities: Provided web design and development as well as print design for a wide variety of clients, from small, local businesses to startups and international companies. Created and updated branding and identity material, set up content management systems, provided art direction, and conducted maintenance. Gathered project requirements and educated clients on successful strategies for their business based on market research. Advised companies on how quality design and performant websites with meaningful content could improve or grow their business. Ran all aspects of freelance business including marketing, networking, proposals, contracts, invoicing, project bidding, and client meetings.
+
+Girl Scouts of Southeastern Michigan
+Detroit, MI
+Print Designer & Web Developer
+August 2009 to May 2010
+Responsibilities: College internship turned contract job after the CEO saw the first project that was completed. Web and print work included artistic direction and creation of brochures, flyers, and other promotional material. Responsible for updates to website and logo branding package for Southeastern Michigan branch. Created public Annual Report and all marketing for their annual event that raised hundreds of thousands of dollars.
+
+
+
+KEY ACCOMPLISHMENTS
+
+Major Refactor
+Took large, enterprise-sized website and conducted a major refactor in spare time over the course of two weeks. Went from seven templates down to three, and reduced CSS files from over 8,000 lines to just 3,000. Broke up CSS in to LESS partials for easier maintenance, and refactored out any specificity issues, eliminating all !importants and overly specified selectors.
+
+Built Framework
+Along with one other developer, built out the entire framework that the entire development team would later use on every project. Wrote documentation about syntax, formatting, naming conventions, and other best practices for better collaboration across all developers. Built pattern library to visually illustrate the framework elements, along with code samples and suggested uses. Included more advanced-level techniques, incorporating BEM naming and OOCSS abstractions.
+
+Project Expert
+Worked on enterprise site for almost three years, starting with a proof of concept and demos to pitch to potential clients, and eventually building out the templates and components that would later be used by over 20 different teams. Only developer to continuously be involved with the project from initial conception to production, ultimately serving as a project lead on three different workstreams (simultaneously) all working on a part of the greater project.
+
+
+
+SKILLS
+
+- HTML5
+- CSS3
+- Javascript (jQuery & AngularJS)
+- Adobe Experience Manager (aka CQ5)
+- Responsive Web Design
+- Version Control (Git & SVN)
+- Accessibility
+- Semantic Markup
+- Documentation Writing
+- User Experience Design
+- User Interface Design
+- Typography
+- Adobe Illustrator & Photoshop
+- CSS Preprocessors
+- Task Automation
+- Progressive Enhancement
+- Graceful Degradation
+- Cross-Browser/Device Testing
+- Project Scaffolding
+- Dependency Management
+- Performance
+- Continuous Integration
+- Agile/Scrum Methodology
+- Interviewing & Resource Management
+- Object Oriented CSS Abstractions/Patterns
+
+
+
+EDUCATION
+
+Schoolcraft College
+Livonia, MI
+September 2009 to December 2009
+Credits earned in Web Design, Flash, Illustrator, and Typography.
+
+University of Michigan
+Dearborn, MI
+September 2005 to May 2009
+Earned Bachelor's Degree in Psychology, with a minor in Philosophy.

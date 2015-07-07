@@ -1,22 +1,36 @@
 <h1>Résumé</h1>
-<p>intro text</p>
 <div class="grid">
-    <p class="grid__item-6">
-        <a href="" class="button" 
-            ng-click="plainTextVersion()"
-            ng-class="{'button--primary': !resumeHighlight}">
-            <span class="icon icon-profile"></span> Text Version
-        </a>
-        <a href="" class="button" 
-            ng-click="highlightedVersion()"
-            ng-class="{'button--primary': resumeHighlight}">
-            <span class="icon icon-embed"></span> Code Version
-        </a>
+    <div class="grid__item-9">
+        <p><em>What happens when you tell a developer to make a résumé? They make it in code, of course!</em>   </p>
+        <p>This résumé is fully semantic and is styled by using CSS to add in the hyphens, periods, and all other formatting and syntax. Without the styling, it reads perfectly to a screenreader, and also allows for styling it in a different way that's a little more conventional.</p>
+        <p><small>(You can also download a <a href="resume/tonymamo.pdf"><span class="icon icon-file-pdf"></span> .pdf</a>, <a href="resume/tonymamo.docx"><span class="icon icon-file-word"></span> .doc</a>, or <a href="resume/tonymamo.txt"><span class="icon icon-file-text2"></span> .txt</a> file if you'd like.)</small></p>
+        
+        <p>
+            <a href="" class="radio-select half-padding" 
+                ng-click="highlightedVersion()" 
+                ng-class="{'radio-select--active': resumeHighlight}">
+                <span class="icon" ng-class="{'icon-radio-checked': resumeHighlight, 'icon-radio-unchecked': !resumeHighlight }"></span>
+                Code Version
+            </a>
+            <a href="" class="radio-select half-padding float-right" 
+                ng-click="plainTextVersion()" 
+                ng-class="{'radio-select--active': !resumeHighlight}">
+                <span class="icon" ng-class="{'icon-radio-checked': !resumeHighlight, 'icon-radio-unchecked': resumeHighlight }"></span>
+                Text Version
+            </a>
+        </p>
+    </div>
+
+    <p class="grid__item-3 align-center">
+        <a href="" ng-click="printResume()" class="button button--secondary button--large full-width" ng-class="{'button--disabled': resumeHighlight}"><span class="icon icon-printer"></span> Print</a>
     </p>
-    <p class="grid__item-6 align-right">
-        <a href="" ng-click="printResume()" class="button button--secondary" ng-class="{'button--disabled': resumeHighlight}"><span class="icon icon-printer"></span> Print</a>
-    </p>    
-</div>
+</div> 
+
+
+
+
+
+
 
 <div id="js-resume">
     <div class="base-padding" ng-class="{'csscv': resumeHighlight, 'non-csscv': !resumeHighlight}">
@@ -29,7 +43,7 @@
             <span class="comment-block__line">About me</span>
         </h2>
 
-        <div class="ruleset">
+        <div class="ruleset do-not-print">
 
             <h3 class="selector">Me</h3>
 
@@ -63,14 +77,14 @@
                 <dt class="property">Website</dt>
                 <dd class="value"><span class="url"><a href="http://tonymamo.com">tonymamo.com</a></span></dd>
 
-                <dt class="property">LinkedIn</dt>
-                <dd class="value"><span class="url"><a href="http://www.linkedin.com/in/anthonymamo">linkedin.com/in/anthonymamo</a></span></dd>
+                <dt class="property do-not-print">LinkedIn</dt>
+                <dd class="value do-not-print"><span class="url"><a href="http://www.linkedin.com/in/anthonymamo">linkedin.com/in/anthonymamo</a></span></dd>
 
-                <dt class="property">GitHub</dt>
-                <dd class="value"><span class="url"><a href="https://github.com/tonymamo/">github.com/tonymamo</a></span></dd>
+                <dt class="property do-not-print">GitHub</dt>
+                <dd class="value do-not-print"><span class="url"><a href="https://github.com/tonymamo/">github.com/tonymamo</a></span></dd>
 
-                <dt class="property">Twitter</dt>
-                <dd class="value"><span class="url"><a href="https://twitter.com/tonymamo">@tonymamo</a></span></dd>
+                <dt class="property do-not-print">Twitter</dt>
+                <dd class="value do-not-print"><span class="url"><a href="https://twitter.com/tonymamo">@tonymamo</a></span></dd>
 
             </dl>
 
@@ -105,7 +119,7 @@
                 <dt class="property">To</dt>
                 <dd class="value"><span class="string">Present</span></dd>
 
-                <dt class="property">Responsibilities</dt>
+                <!-- <dt class="property">Responsibilities</dt>
                 <dd class="value">
                     <ul class="value-list">
                         <li>Consultancy</li>
@@ -113,16 +127,10 @@
                         <li>Workshops</li>
                         <li>Development</li>
                     </ul>
-                </dd>
+                </dd> -->
 
-                <dt class="property">Notes</dt>
-                <dd class="value"><span class="string">After years of continued open-source
-                    contributions, publication of articles, speaking, workshops, and
-                    working in varied organisations, I decided, in 2013, to turn CSS
-                    Wizardry into my full time job. I am working to help agencies,
-                    product teams and individuals write better quality front-end
-                    code for faster, leaner and more scalable products. I am doing
-                    this through a combination of workshops, talks and consultancy.</span></dd>
+                <dt class="property">Responsibilities</dt>
+                <dd class="value"><span class="string">Leverages technical expertise in Front-End Web Development as well as User Experience and Interface Design to provide support and resolve critical issues for team members. Experience includes creation and maintenance of single page websites to enterprise web applications with both internal and external clients using various languages, tools, and configurations. Gather requirements and specifications from product owners and provide estimates and create timelines for project management. Manage a team of developers, conduct interviews, and allocate resources to projects as needed to ensure delivery deadlines with clients. Also conduct code reviews and establish guidelines for entire HTML/CSS team and continue to enhance our processes and best practices. Use the latest and greatest techniques to create sites that are 100% responsive and gracefully degrade (or are progressively enhanced) to project requirements for cross browser/device compatibility. HTML5, CSS3, JS, Angular, and Adobe AEM used on a daily basis.</span></dd>
 
             </dl>
 
@@ -150,28 +158,7 @@
                 <dd class="value"><span class="string">October, 2011</span></dd>
 
                 <dt class="property">Responsibilities</dt>
-                <dd class="value">
-                    <ul class="value-list">
-                        <li>Build</li>
-                        <li><span class="string">Front-end Architecture</span></li>
-                        <li><span class="string">Front-end Performance</span></li>
-                        <li>Scalability</li>
-                        <li><span class="string">Mobile Development</span></li>
-                        <li>Training</li>
-                        <li><span class="string">Developer Relations</span></li>
-                        <li><span class="string">Progressive Enhancement</span></li>
-                        <li><span class="string">Design Rationalisation</span></li>
-                    </ul>
-                </dd>
-
-                <dt class="property">Notes</dt>
-                <dd class="value"><span class="string">Working solo in a large team
-                of software engineers, I was responsible for the front-ends of some
-                of Sky’s largest and most profitable online products. I worked to
-                provide in-house tools and frameworks, as well as code standards,
-                to enable the larger team to construct front-ends. I also focused
-                heavily front-end performance, scalability, architecture and
-                maintainability.</span></dd>
+                <dd class="value"><span class="string">Provided web design and development as well as print design for a wide variety of clients, from small, local businesses to startups and international companies. Created and updated branding and identity material, set up content management systems, provided art direction, and conducted maintenance. Gathered project requirements and educated clients on successful strategies for their business based on market research. Advised companies on how quality design and performant websites with meaningful content could improve or grow their business. Ran all aspects of freelance business including marketing, networking, proposals, contracts, invoicing, project bidding, and client meetings.</span></dd>
 
             </dl>
 
@@ -199,18 +186,107 @@
                 <dd class="value"><span class="string">May, 2010</span></dd>
 
                 <dt class="property">Responsibilities</dt>
-                <dd class="value">
-                    <ul class="value-list">
-                        <li>Build</li>
-                    </ul>
-                </dd>
-
-                <dt class="property">Notes</dt>
-                <dd class="value"><span class="string">Internship turned contract job</span></dd>
+                <dd class="value"><span class="string">College internship turned contract job after the CEO saw the first project that was completed. Web and print work included artistic direction and creation of brochures, flyers, and other promotional material. Responsible for updates to website and logo branding package for Southeastern Michigan branch. Created public Annual Report and all marketing for their annual event that raised hundreds of thousands of dollars.</span></dd>
 
             </dl>
 
         </div>
+
+
+
+
+
+        <h2 class="comment-block resume__subheading">
+            <span class="comment-block__line">Key Accomplishments</span>
+        </h2>
+
+        <div class="ruleset">
+
+            <h3 class="selector"><span class="modifier" data-namespace="accomplishment">Major<span class="selector__delimiter"> </span>Refactor</span></h3>
+
+            <dl class="declarations">
+
+                <dt class="property">Description</dt>
+                <dd class="value"><span class="string">Took large, enterprise-sized website and conducted a major refactor in spare time over the course of two weeks. Went from seven templates down to three, and reduced CSS files from over 8,000 lines to just 3,000. Broke up CSS in to LESS partials for easier maintenance, and refactored out any specificity issues, eliminating all !importants and overly specified selectors.</span></dd>
+
+            </dl>
+        </div>
+
+        <div class="ruleset">
+
+            <h3 class="selector"><span class="modifier" data-namespace="accomplishment">Built<span class="selector__delimiter"> </span>Framework</span></h3>
+
+            <dl class="declarations">
+
+                <dt class="property">Description</dt>
+                <dd class="value"><span class="string">Along with one other developer, built out the entire framework that the entire development team would later use on every project. Wrote documentation about syntax, formatting, naming conventions, and other best practices for better collaboration across all developers. Built pattern library to visually illustrate the framework elements, along with code samples and suggested uses. Included more advanced-level techniques, incorporating BEM naming and OOCSS abstractions.</span></dd>
+
+            </dl>
+        </div>
+
+        <div class="ruleset spaced--large">
+
+            <h3 class="selector"><span class="modifier" data-namespace="accomplishment">Project<span class="selector__delimiter"> </span>Expert</span></h3>
+
+            <dl class="declarations">
+
+                <dt class="property">Description</dt>
+                <dd class="value"><span class="string">Worked on enterprise site for almost three years, starting with a proof of concept and demos to pitch to potential clients, and eventually building out the templates and components that would later be used by over 20 different teams. Only developer to continuously be involved with the project from initial conception to production, ultimately serving as a project lead on three different workstreams (simultaneously) all working on a part of the greater project.</span></dd>
+
+            </dl>
+
+        </div>
+
+
+
+
+
+        <h2 class="comment-block resume__subheading">
+            <span class="comment-block__line">Skills</span>
+        </h2>
+
+        <div class="ruleset spaced--large">
+
+            <h3 class="selector"><span class="modifier" data-namespace="technical">Skills<span class="selector__delimiter"> </span>and<span class="selector__delimiter"> </span>Competencies</span></h3>
+
+            <dl class="declarations">
+
+                <dt class="property">Skill<span class="selector__delimiter"> </span>set</dt>
+                <dd class="value">
+                    <ul class="value-list string skill-list">
+                        <li>HTML5</li>
+                        <li>CSS3</li>
+                        <li>Javascript (jQuery &amp; AngularJS)</li>
+                        <li>Adobe Experience Manager (aka CQ5)</li>
+                        <li>Responsive Web Design</li>
+                        <li>Version Control (Git &amp; SVN)</li>
+                        <li>Accessibility</li>
+                        <li>Semantic Markup</li>
+                        <li>Documentation Writing</li>
+                        <li>User Experience Design</li>
+                        <li>User Interface Design</li>
+                        <li>Typography</li>
+                        <li>Adobe Illustrator &amp; Photoshop</li>
+                        <li>CSS Preprocessors</li>
+                        <li>Task Automation</li>
+                        <li>Progressive Enhancement</li>
+                        <li>Graceful Degradation</li>
+                        <li>Cross-Browser/Device Testing</li>
+                        <li>Project Scaffolding</li>
+                        <li>Dependency Management</li>
+                        <li>Performance</li>
+                        <li>Continuous Integration</li>
+                        <li>Agile/Scrum Methodology</li>
+                        <li>Interviewing &amp; Resource Management</li>
+                        <li>Object Oriented CSS Abstractions/Patterns</li>
+                    </ul>
+                </dd>
+            </dl>
+        </div>
+
+
+
+
 
         <h2 class="comment-block resume__subheading">
             <span class="comment-block__line">Education</span>
@@ -254,11 +330,13 @@
                 <dd class="value"><span class="string">May, 2009</span></dd>
 
                 <dt class="property">Notes</dt>
-                <dd class="value"><span class="string">Earned Bachelor's Degree in Psychology, with a minor in Philosophy</span></dd>
+                <dd class="value"><span class="string">Earned Bachelor's Degree in Psychology, with a minor in Philosophy.</span></dd>
 
             </dl>
 
         </div>
+
+
 
         <p class="comment notice">Inspired by <a href="https://github.com/csswizardry/csscv">CSSCV</a>, a project by <a href="https://twitter.com/csswizardry">Harry Roberts</a>.
         </p>

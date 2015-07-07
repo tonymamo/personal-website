@@ -469,12 +469,8 @@ a {
  */
 .notice {
     @extend %spaced;
-    display: block !important; /* [1] */
+    display: none !important; /* [1] */
 }
-
-
-
-
 
 } //csscv
 
@@ -542,6 +538,13 @@ a {
 
     .notice {
         display: none;
+    }
+
+    @media all and (min-width: $large-grid-breakpoint) {
+        .skill-list {
+            column-count: 2;
+            list-style-position: inside;
+        }
     }
 
 } //non-csscv

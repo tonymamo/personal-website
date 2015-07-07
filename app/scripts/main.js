@@ -22,7 +22,7 @@ angular.module('tmApp', ['ui.router'])
     }
   ];
   $scope.isActive = function(item) {
-    if (item.path == $location.path()) {
+    if (item.path === $location.path()) {
       return true;
     }
     return false;
@@ -30,7 +30,7 @@ angular.module('tmApp', ['ui.router'])
 }])
 .controller('resumeCtrl', ['$scope', function($scope){
 
-  $scope.resumeHighlight = false;
+  $scope.resumeHighlight = true;
 
   $scope.plainTextVersion = function () {
     $scope.resumeHighlight = false;
@@ -49,7 +49,10 @@ angular.module('tmApp', ['ui.router'])
   };
       
 }])
-.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRouterProvider) {
+.config(['$stateProvider', '$urlRouterProvider', '$uiViewScrollProvider', function($stateProvider, $urlRouterProvider, $uiViewScrollProvider) {
+  
+  $uiViewScrollProvider.useAnchorScroll();
+
   //
   // For any unmatched url, redirect to /home
   $urlRouterProvider.otherwise('/home');

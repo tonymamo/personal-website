@@ -39,6 +39,7 @@
 
 .page__heading {
 	margin-bottom: $baseLineHeight;
+	color: $primary-brand;
 }
 
 .page__subheading {
@@ -85,6 +86,41 @@
   	left: 8%;
   	top: -8%;
 	transform: rotate(-8deg);
+}
+
+.radio-select {
+	text-decoration: none;
+	background: $light-grey;
+	border: 1px solid $baseBorderColor;
+	display: inline-block;
+	width: 50%;
+	&:focus,
+	&:active,
+	&:hover,
+	&--active {
+		text-decoration: none;
+		outline: none;
+		box-shadow: inset 0 0 $baseLineHeight/2 rgba($primary-brand,.25);
+		color: $secondary-brand;
+	}
+}
+
+@media all and (min-width: $xl-grid-breakpoint) {
+	body, 
+	div, 
+	pre, 
+	form, 
+	fieldset, 
+	p, 
+	blockquote, 
+	th, 
+	td {
+		font-size: $baseFontSize * 1.25;
+	}
+
+	.page__container {
+		max-width: $xl-grid-breakpoint - $baseLineHeight*2;
+	}
 }
 
 @import "print";
