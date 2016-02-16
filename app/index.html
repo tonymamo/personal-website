@@ -1,16 +1,12 @@
 <!doctype html>
 <html class="no-js" lang="en" ng-app="tmApp">
   <!--
-▄▄▄█████▓ ▒█████   ███▄    █ ▓██   ██▓    ███▄ ▄███▓ ▄▄▄       ███▄ ▄███▓ ▒█████  
-▓  ██▒ ▓▒▒██▒  ██▒ ██ ▀█   █  ▒██  ██▒   ▓██▒▀█▀ ██▒▒████▄    ▓██▒▀█▀ ██▒▒██▒  ██▒
-▒ ▓██░ ▒░▒██░  ██▒▓██  ▀█ ██▒  ▒██ ██░   ▓██    ▓██░▒██  ▀█▄  ▓██    ▓██░▒██░  ██▒
-░ ▓██▓ ░ ▒██   ██░▓██▒  ▐▌██▒  ░ ▐██▓░   ▒██    ▒██ ░██▄▄▄▄██ ▒██    ▒██ ▒██   ██░
-  ▒██▒ ░ ░ ████▓▒░▒██░   ▓██░  ░ ██▒▓░   ▒██▒   ░██▒ ▓█   ▓██▒▒██▒   ░██▒░ ████▓▒░
-  ▒ ░░   ░ ▒░▒░▒░ ░ ▒░   ▒ ▒    ██▒▒▒    ░ ▒░   ░  ░ ▒▒   ▓▒█░░ ▒░   ░  ░░ ▒░▒░▒░ 
-    ░      ░ ▒ ▒░ ░ ░░   ░ ▒░ ▓██ ░▒░    ░  ░      ░  ▒   ▒▒ ░░  ░      ░  ░ ▒ ▒░ 
-  ░      ░ ░ ░ ▒     ░   ░ ░  ▒ ▒ ░░     ░      ░     ░   ▒   ░      ░   ░ ░ ░ ▒  
-             ░ ░           ░  ░ ░               ░         ░  ░       ░       ░ ░  
-                              ░ ░                                                                                                 
+ _____                                                 
+/__   \___  _ __  _   _    /\/\   __ _ _ __ ___   ___  
+  / /\/ _ \| '_ \| | | |  /    \ / _` | '_ ` _ \ / _ \ 
+ / / | (_) | | | | |_| | / /\/\ \ (_| | | | | | | (_) |
+ \/   \___/|_| |_|\__, | \/    \/\__,_|_| |_| |_|\___/ 
+                  |___/                                
 
   Oh hi there! Thanks for stopping by. The code for this site is up on my Github if you want a better look under the hood :D
 
@@ -49,7 +45,7 @@
 
     <div ng-include="'partials/header.html'"></div>
 
-    <main role="main" class="page">
+    <main role="main" class="page" ng-controller="pageCtrl">
       <div ui-view class="page__container base-padding page__content" autoscroll="true">
     </main>
 
@@ -67,6 +63,8 @@
     <!-- bower:js -->
     <script src="/bower_components/angular/angular.js"></script>
     <script src="/bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+    <script src="/bower_components/moment/moment.js"></script>
+    <script src="/bower_components/angular-moment/angular-moment.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 

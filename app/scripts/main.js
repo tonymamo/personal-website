@@ -2,7 +2,7 @@
 
 'use strict';
 
-angular.module('tmApp', ['ui.router'])
+angular.module('tmApp', ['ui.router','angularMoment'])
 .controller('navCtrl', ['$scope', '$location', function($scope, $location) {
   $scope.items = [
     {
@@ -27,6 +27,10 @@ angular.module('tmApp', ['ui.router'])
     }
     return false;
   };
+}])
+.controller('pageCtrl', ['$scope', '$location', function($scope, $location) {
+  $scope.date = new Date();
+  $scope.startDate = new Date('2007-01-01T00:00:01');
 }])
 .controller('resumeCtrl', ['$scope', function($scope){
 

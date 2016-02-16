@@ -3,12 +3,12 @@
 		<h1>About Me</h1>
 
 		<h2 class="page__subheading">Professional Summary</h2>
-		<p>Now with over eight years of professional experience, I am currently managing a team of developers as a Technical Lead at Optum Technology, part of UnitedHealth Group. Having started off my career freelancing after being self-taught in design and development principals, I have worked with new startups and small businesses, established mid-sized companies, as well as large corporations in various industries. Non-technical expertise includes leadership, interviewing, Agile/Scrum methodology, resource allocation, project estimation, and timely deliveries of product.</p>
+		<p>Now with over {{ date | amDifference : startDate :'years'}} years of professional experience, I am currently employed as a Software Engineer at Meridian Health, helping architect a scalable solution to keep up with their growing products and member base. Previously I was managing a team of developers as a Technical Lead at Optum Technology, part of UnitedHealth Group. Having started off my career freelancing after being self-taught in design and development principals, I have worked with new startups and small businesses, established mid-sized companies, as well as large corporations in various industries. Non-technical expertise includes leadership, interviewing, Agile/Scrum methodology, resource allocation, project estimation, and timely deliveries of product.</p>
 
 		<blockquote>
 			<p class="small">Tony is not only our resident guru, he has set the bar high for all of UHG with the cutting edge client-side design and coding.  I’ve reviewed many of his most innovative implementations, and he never ceases to amaze me with his creativity and attentiveness to usability and lean, scalable coding practice, most of which I’d put up against leaders in the industry at large.</p>
 			<footer>- 
-				<cite>David Melkonian, Former Manager at UnitedHealth Group</cite>
+				<cite>David Melkonian, Former Manager</cite>
 			</footer>
 		</blockquote>
 
@@ -53,12 +53,18 @@
 			<li>Interviewing &amp; Resource Management</li>
 		</ul>
 
-		<p>Whoa! You actually read all of that? Well, if you want to learn more, feel free to check out my <a ui-sref="resume">interactive résumé</a> next for an in-depth look. Thanks for stopping by!</p>
+		<p><a href="" ui-sref="resume" class="button button--secondary">Go to Résumé</a>
+
+		<h2 class="page__subheading">Colophon</h2>
+		<p>This site leverages many awesome tools and services that have been built by other developers. Open source libraries and utilities are one of the best things about the web industry in my opinion; it's how we've gotten so far in such a short time.</p>
+		<p>I started this website by creating a repository on <a href="//github.com/">Github</a> for source control, and then scaffolded out the project using <a href="//yeoman.io">Yeoman</a>. That gave me an initial set up including <a href="//nodejs.org/">Node</a> and <a href="//bower.io">Bower</a> components, to manage dependences like <a href="//angularjs.org/">Angular</a>, <a href="//gulpjs.com/">Gulp</a>, and <a href="//github.com/postcss/autoprefixer">Autoprefixer</a>, along with a slew of other handy utilities.</p>
+		<p>Then, I started out with my own custom framework of <a href="//sass-lang.com/">Sass</a> partials, which allow me to quickly start building out pieces of the site. This framework includes variables, utilities, resets, and base styling for many elements, allowing me to quickly skin a site and write new, custom styles.</p>
+		<p>I'm a big fan of semantics, performance, and maintainability, which is why I adhere to the principles of Object Oriented patterns in CSS (<abbr title="Object Oriented Cascading Style Sheets">OOCSS</abbr>), as well as a <abbr title="Block, Element, Modifier">BEM</abbr> naming methodology. This allows me to keep specificity in my CSS classes all on the same level, so I don't go down a path of needing <code>!important</code> statements or overly-specified class names or <code>#id</code>'s&mdash;or worse, inline styles&mdash;in my code. This is hugely important for creating scalable, maintainable code, especially when working with large teams.</p>
+		<p>The fonts are Freight Micro Pro and Freight Sans Pro, served via <a href="//typekit.com">Typekit</a>. The icons are a custom set created using <a href="//icomoon.io">Icomoon</a>, so that I can keep a light footprint and only use the icons I need instead of downloading an entire font.</p>
 
 		<h2 class="page__subheading">Personal Life</h2>
 		<p>Outside of work, I spend my life with my lovely wife Mallorie and our fluffy white dog, Zoe. We are big foodies, coffee snobs, and enjoy finding new craft beers and cocktails. We also love to travel and be outdoors, exploring different cultures, cities, and landscapes. When we aren't hiking or backpacking, we might be exploring Metro Detroit on our motorcycle, or spending time with our families and friends.</p>
 		<p>Want to know anything else? Feel free to drop me a line via <a href="mailto:tony@tonymamo.com?subject=Contact%20from%20website">email</a>.</p>
-		<p><a href="" ui-sref="resume" class="button button--secondary">Check out my résumé!</a>
 	</article>
 	<div ng-include="'partials/aside.html'" class="grid__item-3 grid__offset-1"></div>
 </div>
