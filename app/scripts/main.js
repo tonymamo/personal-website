@@ -28,7 +28,7 @@ angular.module('tmApp', ['ui.router','angularMoment'])
     return false;
   };
 }])
-.controller('pageCtrl', ['$scope', '$location', function($scope, $location) {
+.controller('pageCtrl', ['$scope', function($scope) {
   $scope.date = new Date();
   $scope.startDate = new Date('2007-01-01T00:00:01');
 }])
